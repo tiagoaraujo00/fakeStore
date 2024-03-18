@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { ProductModalDetail } from "../../productModalDetail";
 import { IProductCardProps } from "./interfaces";
 import {
   ButtonProductCardStyled,
@@ -9,15 +11,19 @@ import {
 } from "./styles";
 
 const ProductCard = ({ title, price, img }: IProductCardProps) => {
+  const [isVisible, setIsVisible] = useState(false);
   return (
-    <ContainerProductCardStyled>
-      <ContainerImageProductCardStyled>
-        <ImageProductCardStyled src={img} alt={title} />
-      </ContainerImageProductCardStyled>
-      <TitleProductCardStyled>{title}</TitleProductCardStyled>
-      <PriceProductCardStyled>R$ {price}</PriceProductCardStyled>
-      <ButtonProductCardStyled>Comprar</ButtonProductCardStyled>
-    </ContainerProductCardStyled>
+    <div>
+      <ContainerProductCardStyled>
+        <ContainerImageProductCardStyled>
+          <ImageProductCardStyled src={img} alt={title} />
+        </ContainerImageProductCardStyled>
+        <TitleProductCardStyled>{title}</TitleProductCardStyled>
+        <PriceProductCardStyled>R$ {price}</PriceProductCardStyled>
+        <ButtonProductCardStyled onClick={() =>{setIsVisible(true)}}>Comprar</ButtonProductCardStyled>
+      </ContainerProductCardStyled>
+      <ProductModalDetail isOpen={isVisible} setIsOpen={setIsVisible} />
+    </div>
   );
 };
 

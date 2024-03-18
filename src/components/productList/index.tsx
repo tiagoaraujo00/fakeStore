@@ -17,16 +17,18 @@ const ProductList = () => {
   }, []);
 
   return (
-    <ContainerProductListStyled>
-      {productsList.map((product) => (
-        <ProductCard
-          key={product.id}
-          title={product.title}
-          img={product.image}
-          price={product.price}
-        />
-      ))}
-    </ContainerProductListStyled>
+    <div>
+      <ContainerProductListStyled>
+        {productsList.map((product) => (
+          <ProductCard
+            key={product.id}
+            title={product.title}
+            img={product.image}
+            price={product.price}
+          />
+        ))}
+      </ContainerProductListStyled>
+    </div>
   );
 };
 
