@@ -1,5 +1,6 @@
 import { IProductCardProps } from "./interfaces";
 import {
+  ButtonProductCardStyled,
   ContainerImageProductCardStyled,
   ContainerProductCardStyled,
   ImageProductCardStyled,
@@ -15,6 +16,7 @@ const ProductCard = ({ title, price, img }: IProductCardProps) => {
       </ContainerImageProductCardStyled>
       <TitleProductCardStyled>{title}</TitleProductCardStyled>
       <PriceProductCardStyled>R$ {price}</PriceProductCardStyled>
+      <ButtonProductCardStyled>Comprar</ButtonProductCardStyled>
     </ContainerProductCardStyled>
   );
 };

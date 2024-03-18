@@ -35,3 +35,15 @@ export const TitleProductCardStyled = styled.h3`
 export const PriceProductCardStyled = styled.p`
   font-weight: bold;
 `
+
+export const ButtonProductCardStyled = styled.button`
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border: none;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+`

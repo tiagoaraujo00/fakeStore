@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-
-export const ContainerProductListStyled = styled.div`
+export const PageTitleStyled = styled.header`
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   padding: 10px;
 `

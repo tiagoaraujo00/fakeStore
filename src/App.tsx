@@ -1,7 +1,13 @@
 import { ProductList } from "./components/productList";
+import { Title } from "./components/title";
 
 function App() {
-  return <ProductList />;
+  return (
+    <div>
+      <Title />
+      <ProductList />
+    </div>
+  );
 }
 
 export default App;
