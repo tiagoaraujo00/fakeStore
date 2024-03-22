@@ -25,6 +25,7 @@ const ProductList = () => {
             title={product.title}
             img={product.image}
             price={product.price}
+            description={product.description}
           />
         ))}
       </ContainerProductListStyled>

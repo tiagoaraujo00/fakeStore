@@ -10,7 +10,7 @@ import {
   TitleProductCardStyled,
 } from "./styles";
 
-const ProductCard = ({ title, price, img }: IProductCardProps) => {
+const ProductCard = ({ title, price, img, description }: IProductCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <div>
@@ -22,7 +22,12 @@ const ProductCard = ({ title, price, img }: IProductCardProps) => {
         <PriceProductCardStyled>R$ {price}</PriceProductCardStyled>
         <ButtonProductCardStyled onClick={() =>{setIsVisible(true)}}>Comprar</ButtonProductCardStyled>
       </ContainerProductCardStyled>
-      <ProductModalDetail isOpen={isVisible} setIsOpen={setIsVisible} />
+      <ProductModalDetail isOpen={isVisible} setIsOpen={setIsVisible} productData={{
+        title: title,
+        description: description,
+        price: price,
+        img: img,
+      }}/>
     </div>
   );
 };
