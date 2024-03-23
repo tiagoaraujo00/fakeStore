@@ -14,7 +14,7 @@ export const ContainerProductModalDetailStyled = styled.div`
 `;
 
 export const WrapperModalProductDetailStyled = styled.div`
-  width: 500px;
+  width: 55vw;
   background-color: white;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
@@ -27,6 +27,7 @@ export const HeaderModalProductDetailStyled = styled.header`
   padding: 10px;
   border-bottom: 1px solid black;
   align-items: center;
+  font-size: 10px;
 `;
 
 export const FooterModalProductDetails = styled.footer`
@@ -40,6 +41,26 @@ export const FooterModalProductDetails = styled.footer`
 `;
 
 export const ContentModalProductDetailsStyled = styled.div`
-  min-height: 50px;
-  padding: 10px;
+  min-height: 50vh;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+`
+
+export const ImgContentProductDetailModal = styled.img`
+  width: 200px;
+  object-fit: contain;
+`
+
+export const RightContentModalProductDetailStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+`
+
+export const PriceRightContentModalProductStyled = styled.p`
+  font-weight: bold;
 `
